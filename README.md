@@ -19,7 +19,7 @@ HOW-TO set up:
 
 TODO:
 1) Integrate update queries
-2) Integrate a login feature
+2) Integrate a login feature and other security features
 3) Integrate a search to determine which trainer trains which client
 4) Integrate sort features
 5) Integrate a "Health determinate" which generates a health status for a client based off of parameters given by the client to the administrator
