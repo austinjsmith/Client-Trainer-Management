@@ -15,6 +15,7 @@
     .content{
         overflow: auto;
         position: relative;
+        top: 50;
     }
     .content::before{
         content: "";
@@ -71,6 +72,7 @@
         margin-bottom: 15;
         position: absolute;
         top: 0;
+        width: 100%;
     }
 
     .navbar a {
@@ -188,7 +190,6 @@
         background-color: #ff6666;
     }
 </style>
-<h1>Welcome, User</h1>
 <div class = "navbar">
     <div class = "subnav">
         <button class = "subnavbtn">Search Database <i class = "fa fa-caret-down"></i></button>
@@ -208,17 +209,28 @@
     <div class = "subnav">
         <button class = "subnavbtn">Delete<i class = "fa fa-caret-down"></i></button>
         <div class = "subnav-content">
-            <a href="./DeleteClient.html">Clients</a>
-            <!-- <a href="http://localhost:8080/DeleteTrainer.php">Trainers</a> -->
+            <!-- <a href="DeleteClient.html">Clients</a> -->
+            <a href="DeleteTrainer.html">Trainers</a>
+        </div>
+    </div>
+    <div class = "subnav">
+        <button class = "subnavbtn">Update Data<i class = "fa fa-caret-down"></i></button>
+        <div class = "subnav-content">
+            <a href="/Update/UpdateClient.html">Clients</a>
+            <a href="/Update/UpdateTrainer.html">Trainers</a>
         </div>
     </div>
 </div>
-<form action = "/DELETE_TRAINER" method = "POST">
-    <input type = text name = 'trainer_name' placeholder="Enter trainer's name">
-    <input type = submit name = "s">
-</form>
-<div class = "center_button">
-    <button onclick = "window.location.href='../main.html';">Back to Home</button>
+<div class = "content">
+    <h1>Delete Trainer. <br> THIS IS PERMANENT.</h1>
+
+    <form action = "/delete_trainer" method = "post">
+        <input type = text name = 'name' placeholder="Enter Client's name">
+        <input type = submit name = "s">
+    </form>
+    <div class = "center_button">
+        <button onclick = "window.location.href='../main.html';">Back to Home</button>
+    </div>
 </div>
 </body>
 </html>
